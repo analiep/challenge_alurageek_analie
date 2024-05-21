@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge AluraGeek</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+            
+    <header>
+        <img src="img/head.jpg" alt="Logo do AluraGeek">
+        <img class="logo" src="img/Monkey_Logo.png" alt="Logo do Monkey">
+        <h1 class="white-text">Festas que estão chegando:</h1>
+    
+        <!-- Retângulo preto -->
+        <div class="black-rectangle"></div>
+    </header>
+
+<main>
+    <div class="content">
+        <!-- Aqui você pode adicionar a grade de produtos -->
+        <div id="product-grid" class="product-grid"></div>
+    </div>
+</main>
+<aside class="add-product-box">
+    <h2>Adicionar Novo Produto</h2>
+    <form id="add-product-form">
+        <div class="input-group">
+            <label for="img-url">URL da Imagem:</label>
+            <input type="text" id="img-url" required>
+        </div>
+        <div class="input-group">
+            <label for="product-title">Título:</label>
+            <input type="text" id="product-title" required>
+        </div>
+        <div class="input-group">
+            <label for="product-description">Descrição:</label>
+            <textarea id="product-description" required></textarea>
+        </div>
+        <div class="input-group">
+            <label for="product-price">Preço:</label>
+            <input type="text" id="product-price" required>
+        </div>
+        <button type="submit" id="add-product-button">Adicionar Evento</button>
+    </form>
+</aside>
+
+<footer>
+    <div class="footer-container">
+        <!-- Aqui você pode adicionar o rodapé -->
+        <div class="footer-content">
+            <p class="white-text">Desenvolvido por Analie Peligrinelli</p>
+            <!-- Outro conteúdo do rodapé pode ser adicionado aqui -->
+        </div>
+    </div>
+</footer>
+
+
+<!-- Texto que se move -->
+<div class="black-bar">
+    <p class="scrolling-text white-text">***Encontre sua próxima festa*** </p>
+</div>
+
+
+
+<!-- Importando o script JavaScript -->
+<script src="js/dom.js"></script>
+<script src="js/aplicacoes.js" type="module"></script>
+
+
+</body>
+</html>

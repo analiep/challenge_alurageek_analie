@@ -1,0 +1,206 @@
+/* Estilos CSS para redimensionar a imagem */
+img {
+    max-width: 100%; /* Define a largura máxima da imagem como 100% do contêiner pai */
+    height: auto; /* Garante que a altura seja ajustada automaticamente para manter a proporção original */
+}
+
+/* Estilos CSS para posicionar a logo */
+.logo {
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 10px; /* Define a margem do topo como 10px */
+    left: 20px; /* Define a margem da esquerda como 20px */
+    width: 17%; /* Define a largura como 17% do contêiner pai */
+    height: auto; /* Garante que a altura seja ajustada automaticamente para manter a proporção original */
+    z-index: 1; /* Garante que a logo fique sobreposta à imagem */
+}
+
+/* Estilo para o fundo degradê */
+body {
+    background: linear-gradient(to right, #8A2BE2, #FFA500); /* Define um degradê linear do roxo (#8A2BE2) para o laranja (#FFA500) */
+    font-family: 'Roboto', sans-serif; /* Define a fonte padrão */
+}
+
+/* Estilo para o texto que se move */
+.scrolling-text {
+    color: #FFF; /* Cor do texto branco */
+    font-size: 60px; /* Tamanho da fonte em relação à largura da viewport */
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 45%; /* Posiciona o texto a 10% da altura do header */
+    left: 50%; /* Posiciona o texto horizontalmente no centro */
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    animation: scrollText 20s linear infinite; /* Animação para mover o texto */
+    white-space: nowrap; /* Impede que o texto quebre linha */
+    font-family: "Encode Sans Expanded", sans-serif; /* Aplica a fonte especificada */
+    z-index: 2; /* Garante que o texto fique sobreposto ao retângulo */
+}
+
+/* Estilo para o retângulo preto */
+.black-rectangle {
+    background-color: #000; /* Cor de fundo preto */
+    width: 100%; /* Largura total */
+    height: 10%; /* Altura em relação à altura do header */
+    top: 52%; /* Posição vertical no topo do header */
+    left: 0; /* Posição horizontal inicial */
+    z-index: 1; /* Garante que o retângulo esteja abaixo do texto animado */
+    position: absolute; /* Define o posicionamento absoluto */
+}
+
+/* Media Query para dispositivos móveis */
+@media only screen and (max-width: 768px) {
+    .scrolling-text {
+        font-size: 40px; /* Tamanho da fonte para dispositivos móveis */
+        top: 15%; /* Posiciona o texto a 15% da altura do header para dispositivos móveis */
+    }
+
+    .black-rectangle {
+        top: 20%; /* Posição vertical no topo do header para dispositivos móveis */
+    }
+}
+
+/* Keyframes para a animação do texto que se move */
+@keyframes scrollText {
+    0% { transform: translateX(100%); } /* Começa fora da tela à direita */
+    100% { transform: translateX(-100%); } /* Termina fora da tela à esquerda */
+}
+
+/* Estilo para a grade de produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 produtos por linha com tamanho mínimo de 250px */
+    gap: 20px; /* Espaçamento entre os produtos */
+    margin: 50px auto; /* Margem superior e inferior de 50px, margem lateral automática */
+    max-width: 1200px; /* Largura máxima da grade de produtos */
+    position: relative; /* Define o posicionamento relativo */
+    z-index: 3; /* Garante que o texto fique sobreposto ao retângulo e ao texto animado */
+}
+
+.product {
+    color: #FFF; /* Cor do texto branco */
+    border: 1px solid #ccc; /* Borda fina ao redor do produto */
+    padding: 20px; /* Espaçamento interno do produto */
+    text-align: center; /* Centraliza o conteúdo do produto */
+    border-radius: 15px; /* Borda arredondada */
+    background-color: #b32b2b3a; /* Cor de fundo do produto */
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product button {
+    background-color: #c444a4; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 30px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 15px; /* Borda arredondada */
+}
+
+.product button:hover {
+    background-color: #0a0a0a; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo para a caixa de adicionar novo produto */
+.add-product-box {
+    background-color: #ffffff3a; /* Cor de fundo da caixa */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 15px; /* Borda arredondada */
+    margin: 20px auto; /* Margem superior e inferior de 20px, margem lateral automática */
+    max-width: 500px; /* Largura máxima da caixa */
+    text-align: center; /* Centralizar conteúdo */
+}
+
+.add-product-box h2 {
+    color: white; /* Cor do título */
+    font-size: 28px; /* Tamanho da fonte do título */
+    text-align: center; /* Alinhamento do texto */
+    margin-bottom: 5px; /* Margem inferior */
+}
+
+.input-group {
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+.input-group label {
+    display: block; /* Para colocar o texto em uma linha */
+    margin-bottom: 10px; /* Margem inferior */
+    color: white; /* Cor do texto */
+}
+
+.input-group input,
+.input-group textarea {
+    width: 98%; /* Largura total */
+    padding: 8px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Borda arredondada */
+}
+
+.input-group textarea {
+    height: 60px; /* Altura do textarea */
+}
+
+.input-group input[type="submit"] {
+    background-color: #8A2BE2; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border: none; /* Remove a borda */
+    border-radius: 15px; /* Borda arredondada */
+    cursor: pointer; /* Cursor ao passar */
+    font-weight: bold; /* Negrito */
+    font-size: 16px; /* Tamanho da fonte */
+    display: block; /* Exibir como bloco para centralizar */
+    margin: 0 auto; /* Margem automática para centralizar */
+}
+
+.input-group input[type="submit"]:hover {
+    color: #fff;
+    background-color: #0a0a0a; /* Cor de fundo ao passar */
+}
+
+#add-product-button {
+    background-color: #8A2BE2; /* Cor de fundo roxa */
+    color: #FFF; /* Cor do texto branca */
+    padding: 10px 30px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    border-radius: 15px; /* Borda arredondada */
+    width: auto; /* Largura automática */
+    height: auto; /* Altura automática */
+}
+
+#add-product-button:hover {
+    background-color: #0a0a0a; /* Cor de fundo roxa mais escura ao passar o mouse */
+}
+
+.add-product-box button:hover {
+    color: #fff;
+    background-color: #050505; /* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #000; /* Cor de fundo preta */
+    padding: 10px 0; /* Espaçamento interno superior e inferior */
+    margin-top: 50px; /* Margem superior */
+    position: relative; /* Define o posicionamento relativo */
+}
+
+/* Estilo para o conteúdo do rodapé */
+.footer-container {
+    max-width: 1200px; /* Largura máxima do conteúdo do rodapé */
+    margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+.footer-content {
+    text-align: center; /* Centralizar o texto */
+}
+
+.white-text {
+    color: #fff; /* Cor do texto branco */
+}
+
+/* Cor branca para todos os textos */
+.white-text {
+    color: #fff;
+}
